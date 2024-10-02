@@ -4,14 +4,13 @@ import json
 with open('dados.json',  'r') as file:
     data = json.load(file)
 
-faturamentoDiario = data['faturamentoDiario']
+
 valores = []
 
+for valorDiario in data:
+        valores.append(valorDiario['valor'])
 
-for dayData in faturamentoDiario:
-        valores.append(dayData['valor'])
-
-# Trabalhando os valores obtidos
+#Trabalhando os valores obtidos
 
 diferentesDeZero = []
 
@@ -19,6 +18,7 @@ for valor in valores:
     if valor > 0:
         diferentesDeZero.append(valor)
 
+print(diferentesDeZero)
 
 menorValor = min(diferentesDeZero)
 maiorValor = max(diferentesDeZero)
@@ -33,6 +33,7 @@ print(f"Menor valor de faturamento ocorrido em um dia do mês: {menorValor}")
 print(f"Maior valor de faturamento ocorrido em um dia do mês: {maiorValor}")
 print(f"Media mensal: {media:.2f}")
 print(f"Numero de dias acima da media: {diasAcimadaMedia}")
+
 
 
 
