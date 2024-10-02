@@ -26,7 +26,6 @@ foreach(double valor in faturamentoPorEstado.Values)
 foreach(var estado in faturamentoPorEstado)
 {
     percentual = (estado.Value / total) * 100;
-    Console.WriteLine(estado.Key, percentual);
     percentualPorEstado[estado.Key] = percentual;
 }
 
