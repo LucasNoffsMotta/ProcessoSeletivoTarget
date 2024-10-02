@@ -1,1 +1,1 @@
-Exercicios realizados para o processo seletivo da empresa Target. 
+Exercícios realizados para o processo seletivo da empresa Target. 
